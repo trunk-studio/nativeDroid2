@@ -51,7 +51,7 @@
 			$(document).trigger("createinclude");
 
 			if(opts.src !== null) {
-				el.load(opts.src,opts.post,function() {
+				el.load(opts.src,function() {
 					el.enhanceWithin();
 
 					// Apply waves.js
