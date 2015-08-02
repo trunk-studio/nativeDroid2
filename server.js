@@ -12,8 +12,6 @@ var port = process.env.MOBILE_PORT_3000_TCP_PORT || '3000';
 
 
 var mobileServerUrl = 'http://' + addr + ':' + port;
-var get_ip = require('ipware')().get_ip;
-var requestIp = require('request-ip');
 
 router.get('/shop', function *(next) {
   console.log(mobileServerUrl + '/index.html');
