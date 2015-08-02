@@ -3,6 +3,7 @@ start server
 
 1.	npm start
 2.	visit: http://localhost:3000/index.html
+3.	sample: http://localhost:3000/examples/agricloud/shop.html
 
 nativeDroid2
 ============
