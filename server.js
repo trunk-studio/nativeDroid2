@@ -1,15 +1,23 @@
 var koa = require('koa');
 var router = require('koa-router')();
 var request = require("co-request");
-var koaBodyParser = require('koa-bodyparser');
 var mount = require('koa-mount');
 var path = require('path');
-var staticCache = require('koa-static-cache');
-var serve = require('koa-static-folder');
+
 
 var app = module.exports = koa();
 
-app.use(koaBodyParser());
+var addr = process.env.MOBILE_PORT_1337_TCP_ADDR || 'localhost';
+var port = process.env.MOBILE_PORT_1337_TCP_PORT || '3000';
+
+var mobileServerUrl = 'http://' + addr + ':' + port;
+
+
+router.get('/shop', function *(next) {
+  this.redirect(mobileServerUrl + '/index.html')
+});
+
+
 
 app.use(serve('.'));
 
