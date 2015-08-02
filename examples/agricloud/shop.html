@@ -10,24 +10,42 @@
 		<link rel="stylesheet" href="/vendor/wow/animate.css" />
 		<link rel="stylesheet" href="/css/nativedroid2.css" />
 
+		<!-- Owl Carousel Assets -->
+    <link href="http://owlgraphic.com/owlcarousel/owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link href="http://owlgraphic.com/owlcarousel/owl-carousel/owl.theme.css" rel="stylesheet">
+<style>
+#owl-demo .item img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+</style>
 	</head>
 	<body>
 
 		<div data-role="page">
 
-			<nd2-include data-src="/examples/fragments/panel.left.html"></nd2-include>
+			<!--<nd2-include data-src="sidebar.html"></nd2-include>-->
 
 			<div data-role="header" data-position="fixed">
-				<a href="#leftpanel" class="ui-btn ui-btn-left"><i class="zmdi zmdi-menu"></i></a>
-				<h1>
-					<i class="zmdi zmdi-cloud-done"></i>
-					雲端農場
-				</h1>
+				<a href="#leftpanel" class="ui-btn ui-btn-left"><i class="zmdi zmdi-cloud-done"></i></a>
+
+				<h1>雲端農場</h1>
+			</div>
+
+			<div id="owl-demo" class="owl-carousel owl-theme">
+
+				<div class="item"><img src="img/slide1.jpg" alt="The Last of us"></div>
+				<div class="item"><img src="img/slide2.jpg" alt="GTA V"></div>
+				<div class="item"><img src="img/slide3.jpg" alt="Mirror Edge"></div>
+
 			</div>
 
 			<div role="main" class="ui-content wow fadeIn" data-inset="false" data-wow-delay="0.2s">
 
 				<!-- Simple Card with Title !-->
+
+
 
 				<div class="nd2-card">
 
@@ -65,28 +83,77 @@
 
 				</div>
 
+				<button class="ui-btn waves-effect waves-button waves-effect waves-button">立即前往雲端農場店鋪</button>
 			</div>
 
 			<div data-role="footer" data-position="fixed">
+
 				<div data-role="navbar">
 					<ul>
-						<li><a href="#home" data-action="announce" data-icon="home">商品訂購</a></li>
-						<li><a href="#orderQuery" data-action="contact" data-icon="star">訂單查詢</a></li>
-						<li><a href="#home" data-action="information" data-icon="info">履歷</a></li>
-						<li><a href="#contact" data-action="about" data-icon="grid">聯絡</a></li>
+						<li>
+							<a href="#home">
+								<i class='zmdi zmdi-home'></i>
+								<br/>
+								商品
+							</a>
+						</li>
+						<li>
+							<a href="#orderQuery">
+								<i class="zmdi zmdi-shopping-cart"></i>
+								<br/>
+								訂單
+							</a>
+						</li>
+						<li>
+							<a href="#home">
+								<i class="zmdi zmdi-check"></i>
+								<br/>
+								履歷
+							</a>
+						</li>
+						<li>
+							<a href="#contact">
+								<i class="zmdi zmdi-phone"></i>
+								<br/>
+								聯絡
+							</a>
+						</li>
 					</ul>
 				</div><!-- /navbar -->
+
 			</div>
 
 		</div>
 
-		<script src="/vendor/jquery/jquery.min.js"></script>
-		<script src="/vendor/jquery-ui/jquery-ui.min.js"></script>
-		<script src="/vendor/jquerymobile/jquery.mobile.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script src="//code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
 		<script src="/vendor/waves/waves.min.js"></script>
 		<script src="/vendor/wow/wow.min.js"></script>
 		<script src="/js/nativedroid2.js"></script>
 		<script src="/nd2settings.js"></script>
 
+<script src="http://owlgraphic.com/owlcarousel/owl-carousel/owl.carousel.js"></script>
+<script>
+$(document).ready(function() {
+
+  $("#owl-demo").owlCarousel({
+
+      navigation : false, // Show next and prev buttons
+      slideSpeed : 300,
+      paginationSpeed : 400,
+      singleItem:true
+
+      // "singleItem:true" is a shortcut for:
+      // items : 1,
+      // itemsDesktop : false,
+      // itemsDesktopSmall : false,
+      // itemsTablet: false,
+      // itemsMobile : false
+
+  });
+
+});
+</script>
 	</body>
 </html>
